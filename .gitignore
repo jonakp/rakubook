@@ -25,3 +25,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore rakuten api ids.
+/config/initializers/rakuten.rb
+/vender

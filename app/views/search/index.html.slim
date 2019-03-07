@@ -1,0 +1,19 @@
+.container
+  h1 Search Ruby items from Rakuten Books
+  - @items.first(10).each_slice(2) do |item1, item2|
+    .row
+      .col
+        .product-box
+          h4.book-title 
+            = "#{item1['title']}"
+            br
+            = "#{item1['itemPrice']} 円"
+          img src="#{item1['largeImageUrl']}"
+      .col
+        .product-box
+          - if item2
+            h4.book-title 
+              = "#{item2['title']}"
+              br
+              = "#{item2['itemPrice']} 円"
+            img src="#{item2['largeImageUrl']}"
