@@ -1,24 +1,20 @@
-# README
+# Process of Development
+1. Make Branch for development
+ - git checkout -b DEV-#
+2. Do development
+3. Execute the following check
+ - Rubocop
+ - slim-lint(if necessary)
+ - scss-lint(if necessary)
+ - Rspec(if necessary)
+4. Execute "git push"
+5. Make PR as below
+  - Template of PR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  ```
+  close #0
 
-Things you may want to cover:
+  # Issues
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  # Contents of check
+  ```
