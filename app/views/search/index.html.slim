@@ -1,6 +1,6 @@
 .container
   h1 Search Ruby items from Rakuten Books
-  - @items.first(10).each_slice(2) do |item1, item2|
+  - @items.first(10).each do |item1|
     .row
       .col
         .product-box
@@ -9,11 +9,6 @@
             br
             = "#{item1['itemPrice']} 円"
           img src="#{item1['largeImageUrl']}"
-      .col
-        .product-box
-          - if item2
-            h4.book-title 
-              = "#{item2['title']}"
-              br
-              = "#{item2['itemPrice']} 円"
-            img src="#{item2['largeImageUrl']}"
+          br
+          - reading = Reading.new(name: item1['title'], price: item1['itemPrice'])
+          = link_to t('.register'), new_reading_path(name: item1['title'], price: item1['itemPrice']), class: 'btn btn-primary'

@@ -1,0 +1,27 @@
+ja:
+  # モデルは全て activerecord 以下に記述する。
+  # これにより、User.model_name.human / User.human_attribute_name({attr_name})でアクセス可能。
+  activerecord:
+    models:
+      reading: '読書履歴'
+    attributes:
+      reading:
+        name: '書籍名'
+        price: '価格'
+    errors:
+      models:
+        reading:
+  
+  # ビューはビューを格納しているフォルダ名を起点にし、ビュー名毎に記述する。
+  # 対応するビューの中ではツリーを省略できる。<%= t '.title' %>
+  search:
+    index:
+      register: '読んだ！'
+  common:
+    edit: '編集'
+    destroy: '削除'
+    confirm: '本当に削除しますか？'
+ 
+  # グローバルな感じのエラーはerrorsを起点にする。
+  errors:
+    nanikano_error: 'よくわからないけど例外です。'

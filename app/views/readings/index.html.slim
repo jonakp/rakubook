@@ -1,23 +1,20 @@
-h1 Listing readings
-
-table
-  thead
-    tr
-      th Name
-      th Price
-      th
-      th
-      th
-
-  tbody
-    - @readings.each do |reading|
+.container
+  h1=Reading.model_name.human
+  table
+    thead
       tr
-        td = reading.name
-        td = reading.price
-        td = link_to 'Show', reading
-        td = link_to 'Edit', edit_reading_path(reading)
-        td = link_to 'Destroy', reading, data: { confirm: 'Are you sure?' }, method: :delete
+        th=Reading.human_attribute_name(:name)
+        th=Reading.human_attribute_name(:price)
+        th
+        th
+        th
 
-br
+    tbody
+      - @readings.each do |reading|
+        tr
+          td = reading.name
+          td = reading.price
+          td = link_to t('common.edit'), edit_reading_path(reading)
+          td = link_to t('common.destroy'), reading, data: { confirm: t('common.confirm') }, method: :delete
 
-= link_to 'New Reading', new_reading_path
+  br
