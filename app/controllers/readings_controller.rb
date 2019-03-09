@@ -1,28 +1,20 @@
 class ReadingsController < ApplicationController
   before_action :set_reading, only: [:show, :edit, :update, :destroy]
 
-  # GET /readings
-  # GET /readings.json
   def index
     @readings = Reading.all
   end
 
-  # GET /readings/1
-  # GET /readings/1.json
   def show
   end
 
-  # GET /readings/new
   def new
     @reading = Reading.new
   end
 
-  # GET /readings/1/edit
   def edit
   end
 
-  # POST /readings
-  # POST /readings.json
   def create
     @reading = Reading.new(reading_params)
 
@@ -37,8 +29,6 @@ class ReadingsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /readings/1
-  # PATCH/PUT /readings/1.json
   def update
     respond_to do |format|
       if @reading.update(reading_params)
@@ -51,8 +41,6 @@ class ReadingsController < ApplicationController
     end
   end
 
-  # DELETE /readings/1
-  # DELETE /readings/1.json
   def destroy
     @reading.destroy
     respond_to do |format|
