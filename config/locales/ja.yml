@@ -11,7 +11,8 @@ ja:
     errors:
       models:
         reading:
-  
+  appname: 'どや読書'
+
   # ビューはビューを格納しているフォルダ名を起点にし、ビュー名毎に記述する。
   # 対応するビューの中ではツリーを省略できる。<%= t '.title' %>
   rakuten:
@@ -22,6 +23,9 @@ ja:
     edit: '編集'
     destroy: '削除'
     confirm: '本当に削除しますか？'
+  header:
+    search: 本の検索
+    history: 読書履歴
  
   # グローバルな感じのエラーはerrorsを起点にする。
   errors:
