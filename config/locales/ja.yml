@@ -19,6 +19,9 @@ ja:
     index:
       title: '本を検索'
       register: '読んだ！'
+  readings:
+    index:
+      doya_price: '本代でドヤる'
   common:
     edit: '編集'
     destroy: '削除'
