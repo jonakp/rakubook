@@ -22,6 +22,9 @@ ja:
     edit: '編集'
     destroy: '削除'
     confirm: '本当に削除しますか？'
+  header:
+    search: 本の検索
+    history: 読書履歴
  
   # グローバルな感じのエラーはerrorsを起点にする。
   errors:

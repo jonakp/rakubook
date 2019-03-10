@@ -1,0 +1,8 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+  a.navbar-brand href="#" Navbar
+  button.navbar-toggler type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+    span.navbar-toggler-icon
+  #navbarNavAltMarkup.collapse.navbar-collapse
+    .navbar-nav
+      = link_to t('header.search'), rakuten_index_path, class: 'nav-item nav-link'
+      = link_to t('header.history'), readings_path, class: 'nav-item nav-link'
