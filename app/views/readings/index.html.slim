@@ -1,5 +1,8 @@
 .container
   h1=Reading.model_name.human
+
+  = link_to t('.doya_price'), readings_doya_path, class: 'btn btn-primary'
+
   table
     thead
       tr
@@ -16,5 +19,3 @@
           td = reading.price
           td = link_to t('common.edit'), edit_reading_path(reading)
           td = link_to t('common.destroy'), reading, data: { confirm: t('common.confirm') }, method: :delete
-
-  br
