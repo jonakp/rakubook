@@ -1,0 +1,8 @@
+.container
+  h1=t('.title')
+
+  = form_with url: rakuten_index_path, method: :get, local: true do |form|
+    = form.text_field :word
+    = form.submit
+
+  = render 'items'
