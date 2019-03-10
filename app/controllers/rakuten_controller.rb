@@ -1,9 +1,8 @@
 class RakutenController < ApplicationController
   def index
-    @items = RakutenWebService::Books::Book.search(title: 'Ruby')
-  end
-
-  def book_search
-    render 'index'
+    if params[:word]
+      word = params[:word]
+      @items = RakutenWebService::Books::Book.search(title: word)
+    end
   end
 end

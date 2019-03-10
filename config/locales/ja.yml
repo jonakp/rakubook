@@ -16,6 +16,7 @@ ja:
   # 対応するビューの中ではツリーを省略できる。<%= t '.title' %>
   rakuten:
     index:
+      title: '本を検索'
       register: '読んだ！'
   common:
     edit: '編集'
