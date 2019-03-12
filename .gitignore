@@ -28,4 +28,4 @@
 
 # Ignore rakuten api ids.
 /config/initializers/rakuten.rb
-/vender
+/vendor/bundle
