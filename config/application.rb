@@ -32,6 +32,5 @@ module Rakubook
 
     # Setting for i18n
     config.i18n.default_locale = :ja
-
   end
 end

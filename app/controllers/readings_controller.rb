@@ -3,14 +3,14 @@ class ReadingsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @readings = Reading.all
+    @readings = Reading.where(user_id: current_user.id)
   end
 
   def show
   end
 
   def new
-    @reading = Reading.new(name: params[:name], price: params[:price])
+    @reading = Reading.new(name: params[:name], price: params[:price], user_id: current_user.id)
   end
 
   def edit
@@ -60,6 +60,6 @@ class ReadingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reading_params
-      params.require(:reading).permit(:name, :price)
+      params.require(:reading).permit(:name, :price, :user_id)
     end
 end
