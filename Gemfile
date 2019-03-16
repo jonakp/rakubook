@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # For rakubook
 gem 'rakuten_web_service'
 gem 'slim-rails'
+gem 'devise'
