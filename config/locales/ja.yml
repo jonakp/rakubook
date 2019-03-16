@@ -29,6 +29,8 @@ ja:
   header:
     search: 本の検索
     history: 読書履歴
+    login: ログイン
+    logout: ログアウト
  
   # グローバルな感じのエラーはerrorsを起点にする。
   errors:
