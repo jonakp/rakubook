@@ -3,14 +3,13 @@
 
   = link_to t('.doya_price'), readings_doya_path, class: 'btn btn-primary'
 
-  table
-    thead
+  table.table.table-hover.mt-2
+    thead.thead-light
       tr
-        th=Reading.human_attribute_name(:name)
-        th=Reading.human_attribute_name(:price)
-        th
-        th
-        th
+        th[scope="col"] = Reading.human_attribute_name(:name)
+        th[scope="col"] = Reading.human_attribute_name(:price)
+        th[scope="col"]
+        th[scope="col"]
 
     tbody
       - @readings.each do |reading|

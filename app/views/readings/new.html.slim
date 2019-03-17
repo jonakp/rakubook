@@ -1,6 +1,6 @@
-h1 New reading
-
 .container
+  h1 = t('.title')
+
   == render 'form'
 
-  = link_to 'Back', readings_path
+  = link_to t('common.back'), readings_path

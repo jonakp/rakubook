@@ -1,8 +1,15 @@
 .container
   h1=t('.title')
 
-  = form_with url: rakuten_index_path, method: :get, local: true do |form|
-    = form.text_field :word
-    = form.submit
+  = form_with url: rakuten_index_path, method: :get, local: true, html: {class: 'form-inline'} do |form|
+    .form-group = form.text_field :word, class: 'form-control mt-1', placeholder: 'キーワード(書籍名)', value: @word
+    = form.submit t('.button'), class: 'btn btn-primary mt-1 ml-1'
 
-  = render 'items'
+  br
+
+  - @items&.first(100)&.each_slice(2) do |item1, item2|
+    .row.product-row
+      .col
+        = render 'items', item: item1
+      .col
+        = render 'items', item: item2

@@ -19,17 +19,27 @@ ja:
 
   # ビューはビューを格納しているフォルダ名を起点にし、ビュー名毎に記述する。
   # 対応するビューの中ではツリーを省略できる。<%= t '.title' %>
+  static_page:
+    home:
+      link-to-signup: 'まずはアカウント登録！'
   rakuten:
     index:
       title: '本を検索'
+      button: '検索'
+    items:
       register: '読んだ！'
   readings:
     index:
       doya_price: '本代でドヤる'
+    new:
+      title: '読書履歴の登録'
+    form:
+      button: '登録'
   common:
     edit: '編集'
     destroy: '削除'
     confirm: '本当に削除しますか？'
+    back: 戻る
   header:
     search: 本の検索
     history: 読書履歴

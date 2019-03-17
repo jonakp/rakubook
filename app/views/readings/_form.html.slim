@@ -1,4 +1,5 @@
 = form_for @reading do |f|
+  .form-group
   - if @reading.errors.any?
     #error_explanation
       h2 = "#{pluralize(@reading.errors.count, "error")} prohibited this reading from being saved:"
@@ -7,10 +8,10 @@
           li = message
 
   = f.hidden_field :user_id
-  .field
+  .form-group
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label :price
-    = f.number_field :price
-  .actions = f.submit
+    = f.number_field :price, class: 'form-control'
+  .actions = f.submit t('.button'), class: 'btn btn-primary mb-2'

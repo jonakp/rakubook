@@ -6,9 +6,6 @@ class ReadingsController < ApplicationController
     @readings = Reading.where(user_id: current_user.id)
   end
 
-  def show
-  end
-
   def new
     @reading = Reading.new(name: params[:name], price: params[:price], user_id: current_user.id)
   end
@@ -21,7 +18,7 @@ class ReadingsController < ApplicationController
 
     respond_to do |format|
       if @reading.save
-        format.html { redirect_to @reading, notice: 'Reading was successfully created.' }
+        format.html { redirect_to readings_path, notice: 'Reading was successfully created.' }
       else
         format.html { render :new }
       end
