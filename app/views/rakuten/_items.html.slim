@@ -1,13 +1,9 @@
-- @items&.first(10)&.each do |item1|
-  .row
-    .col
-      .product-box
-        h4.book-title
-          = "#{item1['title']}"
-          br
-          = "#{item1['itemPrice']} 円"
-        img src="#{item1['largeImageUrl']}"
-        br
-        - reading = Reading.new(name: item1['title'], price: item1['itemPrice'])
-        = link_to t('.register'), new_reading_path(name: item1['title'], price: item1['itemPrice']), class: 'btn btn-primary'
-
+.product-box
+  h4.book-title
+    = "#{item['title']}"
+    br
+    = "#{item['itemPrice']} 円"
+  img src="#{item['largeImageUrl']}"
+  br
+  - reading = Reading.new(name: item['title'], price: item['itemPrice'])
+  = link_to t('.register'), new_reading_path(name: item['title'], price: item['itemPrice']), class: 'btn btn-primary'

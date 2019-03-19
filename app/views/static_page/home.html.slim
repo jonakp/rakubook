@@ -1,4 +1,6 @@
-.jumbotron.jumbotron-fluid
-  .container
-    h1 = t('appname')
-    p = 'たまには読書でドヤってもいいんじゃない？'
+.top-page
+  .jumbotron
+    .container-fluid.text-center
+      = image_tag "top.png", class: 'img-fluid'
+    .text-center
+      = link_to t('.link-to-signup'), new_user_registration_path, class: 'btn btn-lg btn-primary'
