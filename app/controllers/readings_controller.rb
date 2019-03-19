@@ -46,7 +46,7 @@ class ReadingsController < ApplicationController
   end
 
   def doya
-    @price = Reading.sum(:price)
+    @price = Reading.where(user_id: current_user.id).sum(:price)
   end
 
   private
