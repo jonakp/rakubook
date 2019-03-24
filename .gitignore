@@ -29,3 +29,6 @@
 # Ignore rakuten api ids.
 /config/initializers/rakuten.rb
 /vendor/bundle
+
+# Ignore mysql volumes
+/mysql
