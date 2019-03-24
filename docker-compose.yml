@@ -46,7 +46,7 @@ services:
 
     #dockerと同階層に既存のrailsプロジェクトが展開されているため、それを参照する設定
     volumes:
-      - .:/application
+      - .:/myproject
     ports:
       - "3000:3000"
 
