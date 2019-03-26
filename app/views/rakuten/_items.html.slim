@@ -1,9 +1,10 @@
-.product-box
-  h4.book-title
-    = "#{item['title']}"
+- if item.present?
+  .product-box
+    h4.book-title
+      = "#{item['title']}"
+      br
+      = "#{item['itemPrice']} 円"
+    img src="#{item['largeImageUrl']}"
     br
-    = "#{item['itemPrice']} 円"
-  img src="#{item['largeImageUrl']}"
-  br
-  - reading = Reading.new(name: item['title'], price: item['itemPrice'])
-  = link_to t('.register'), new_reading_path(name: item['title'], price: item['itemPrice']), class: 'btn btn-primary'
+    - reading = Reading.new(name: item['title'], price: item['itemPrice'])
+    = link_to t('.register'), new_reading_path(name: item['title'], price: item['itemPrice']), class: 'btn btn-primary'

@@ -6,7 +6,6 @@
     = form.submit t('.button'), class: 'btn btn-primary mt-1 ml-1'
 
   br
-
   - @items&.first(100)&.each_slice(2) do |item1, item2|
     .row.product-row
       .col
